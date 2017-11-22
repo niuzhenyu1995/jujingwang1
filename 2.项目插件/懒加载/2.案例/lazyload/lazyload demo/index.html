@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/1.jpg" height="518" width="278" alt="">
+    	<br>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/2.jpg" height="518" width="278" alt="">
+    	<br>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/3.jpg" height="518" width="278" alt="">
+    	<br>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/2.jpg" height="518" width="278" alt="">
+    	<br>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/3.jpg" height="518" width="278" alt="">
+    	<br>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/2.jpg" height="518" width="278" alt="">
+    	<br>
+    	<img class="lazy" src="images/lazyload.gif" data-original="images/3.jpg" height="518" width="278" alt="">
+
+		<!-- 页面基本结构 -->
+    	<div id="fullpage">
+    		<div class="section">文字</div>
+    		<div class="section">文字</div>
+    		<div class="section">文字</div>
+    		<div class="section">文字</div>
+    	</div>
+
+		<!-- 给每一个section页增加幻灯片（比如可以让它在这个当前页上横向滚动 -->    	
+		<div class="section">
+			<div class="slider">slider1</div>
+			<div class="slider">slider2</div>
+			<div class="slider">slider3</div>
+			<div class="slider">slider4</div>
+		</div>
+
+
+
+    </body>
+    <script src="lib/jquery-2.1.4.min.js"></script>
+    <script src="lib/jquery.lazyload.min.js"></script>
+    <script>
+		/*$(function() {
+		    $("img.lazy").lazyload({
+		    	effect: "fadeIn"
+		    });
+		});*/
+		$(function() {
+			$("#funllpage").fullpage();
+		})
+    </script>
+</html>

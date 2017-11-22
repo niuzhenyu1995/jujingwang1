@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.min.css" rel="stylesheet">
+        <style>
+			body {
+				font-size: 30px;
+			}
+			/* .section1 {
+				background-color: green;
+			}
+			.section2 {
+				background: pink;
+			}
+			.section3 {
+				background-color: gold;
+			}
+			.section4 {
+				background-color: red;
+			}
+			
+			.section2 .slide {
+				text-align: center;
+			} */
+        </style>
+    </head>
+    <body>
+    	<!-- 骨架fullpage -->
+    	<div id="fullpage">
+    		<div class="section">第一屏</div>
+    		<div class="section">
+				<div class="slide">第二屏第一张幻灯片</div>
+				<div class="slide">第二屏第二张幻灯片</div>
+				<div class="slide">第二屏第三张幻灯片</div>
+				<div class="slide">第二屏第四张幻灯片</div>
+    		</div>
+    		<div class="section">第三屏</div>
+    		<div class="section">第四屏</div>
+    	</div>
+    </body>
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/fullPage.js/2.9.4/jquery.fullpage.js"></script>
+
+    <script>
+		$(function() {
+			$("#fullpage").fullpage({
+				sectionsColor: ["green","pink","gold","red"],
+				// controlArrows: false
+				navigation:true,
+				// navigationPosition: "left",
+				navigationTooltips:["第一屏","第二屏","第三屏","第四屏"],
+				showActiveTooltip: true,
+
+				/*回调函数的使用*/
+				afterRender:function(){
+					console.log("页面已经加载完成");
+				},
+
+				onLeave: function(index,nextIndex,direction){
+					console.log("index="+index+" nextIndex="+nextIndex+"direction="+direction)
+				}
+			});
+		})
+    </script>
+</html>
